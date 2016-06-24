@@ -7,14 +7,14 @@ var app = angular.module('starter', ['ionic', 'ionic-material']);
 var Push;
 var globalPushNotificationService;
 var globalState;
-app.run(['$ionicPlatform','$state','pushNotificationService',function ($ionicPlatform, $state, pushNotificationService) {
+app.run(['$ionicPlatform', '$state', 'pushNotificationService', function ($ionicPlatform, $state, pushNotificationService) {
   globalPushNotificationService = pushNotificationService;
   globalState = $state;
   $ionicPlatform.ready(function () {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
 
-    if(ionic.Platform.platform()!=='win32'){
+    if (ionic.Platform.platform() !== 'win32') {
       var androidConfig = {
         'senderID': '91101716832',
         'sound': true,
@@ -24,24 +24,20 @@ app.run(['$ionicPlatform','$state','pushNotificationService',function ($ionicPla
         "android": androidConfig
       });
 
-      Push.on('registration', function(data) {
+      Push.on('registration', function (data) {
         // device token:
         var deviceToken = data.registrationId;
         console.log('pushToken', deviceToken);
         globalPushNotificationService.sentdoken(deviceToken);
       });
 
-
-
-      Push.on('error', function(e) {
+      Push.on('error', function (e) {
         console.error('Notifications error: ', e.message, e);
       });
 
-
-      Push.on('notification', function(response){
+      Push.on('notification', function (response) {
         console.log('norification', response)
         console.log('any additinal data the push recieved', response.additionalData);
-
         switch (response.case) {
           case '1':
             globalState.go('');
