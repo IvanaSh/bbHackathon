@@ -4,29 +4,22 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 var app = angular.module('starter', ['ionic', 'ionic-material']);
-
-app.run(function ($ionicPlatform) {
+var Push;
+var globalPushNotificationService;
+var globalState;
+app.run(['$ionicPlatform','$state','pushNotificationService',function ($ionicPlatform, $state, pushNotificationService) {
+  globalPushNotificationService = pushNotificationService;
+  globalState = $state;
   $ionicPlatform.ready(function () {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
-
-    //
-    // var push = new Ionic.init({
-    //   "debug": true
-    // });
-    //
-    // push.register(function(token) {
-    //   console.log("Device token:",token.token);
-    //   push.saveToken(token);  // persist the token in the Ionic Platform
-    // });
-
 
     var androidConfig = {
       'senderID': '91101716832',
       'sound': true,
       'vibrate': true
     };
-    var Push = PushNotification.init({
+    Push = PushNotification.init({
       "android": androidConfig
     });
 
@@ -34,7 +27,9 @@ app.run(function ($ionicPlatform) {
       // device token:
       var deviceToken = data.registrationId;
       console.log('pushToken', deviceToken);
+      globalPushNotificationService.sentdoken(deviceToken);
     });
+
 
 
     Push.on('error', function(e) {
@@ -44,7 +39,17 @@ app.run(function ($ionicPlatform) {
 
     Push.on('notification', function(response){
       console.log('norification', response)
-      console.log('any additinal data the push recieved', response.additionalData)
+      console.log('any additinal data the push recieved', response.additionalData);
+
+      switch (response.case) {
+        case '1':
+          globalState.go('');
+          break;
+        case '2':
+          globalState.go('');
+          break;
+        default:
+      }
     });
 
 
@@ -54,8 +59,8 @@ app.run(function ($ionicPlatform) {
     if (window.StatusBar) {
       StatusBar.styleDefault();
     }
-  });
-})
+  }).bind(this);
+}])
 
 app.config(function ($stateProvider, $urlRouterProvider) {
   $stateProvider
