@@ -1,13 +1,13 @@
-app.service('pushNotificationService', ['$http',pushNotificationService]);
+app.service('pushNotificationService', ['$http', pushNotificationService]);
 
 function pushNotificationService($http) {
 
-  var endpoint = 'someRandomURL';
+  var endpoint = 'https://bbhackathon.herokuapp.com/random/send/';
 
   this.sendToken = function (token) {
     var data = {
-      token:token
+      token: token
     }
-    return $http.post(endpoint + '/post',data);
+    return $http.post(endpoint + '/post', data);
   };
 };
