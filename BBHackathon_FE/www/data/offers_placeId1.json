@@ -7,16 +7,29 @@
     "imageSrc": "img/products/pastrmajlija.jpg",
     "regularPrice": 200,
     "currency": "MKD",
-    "discount": 20
+    "discount": 15,
+    "discountId": "RR234D346GJU"
   },
   {
-    "id": 1,
+    "id": 2,
     "placeId": 1,
-    "name": "Pastrmajlija",
-    "description": "Pastrmalija is a Macedonian bread pie made from dough and meat. Pastrmalija is usually oval-shaped with sliced meat cubes on top of it. Its name derives from the word pastrma, meaning salted and dried meat of sheep or lamb",
-    "imageSrc": "img/products/pastrmajlija.jpg",
-    "regularPrice": 200,
+    "name": "Shopska Salad",
+    "description": "Shopska is a Macedonian cold salad popular throughout the Balkans and Central Europe. It is made from tomatoes, cucumbers, onion/scallions, raw or roasted peppers, sirene (white brine cheese), and parsley.",
+    "imageSrc": "img/products/shopska-salad.jpg",
+    "regularPrice": 180,
     "currency": "MKD",
-    "discount": 20
+    "discount": 10,
+    "discountId": "RR54FE345HJUI"
+  },
+  {
+    "id": 3,
+    "placeId": 1,
+    "name": "Trilece cake",
+    "description": "Shopska is a Macedonian cold salad popular throughout the Balkans and Central Europe. It is made from tomatoes, cucumbers, onion/scallions, raw or roasted peppers, sirene (white brine cheese), and parsley.",
+    "imageSrc": "img/products/trilece.jpg",
+    "regularPrice": 100,
+    "currency": "MKD",
+    "discount": 10,
+    "discountId": "RRT6784HJT190"
   }
 ]

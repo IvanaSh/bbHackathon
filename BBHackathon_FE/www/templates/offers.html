@@ -1,9 +1,71 @@
 <ion-view view-title="Offers" align-title="left">
 
   <ion-content>
-    <div ng-repeat="product in products">
-      <div class="card">
-        {{product.name}}
+    <div class="list">
+      <div ng-repeat="product in products">
+        <div class="list card stable-border">
+          <img ng-src="{{product.imageSrc}}" width="100%">
+
+          <div class="item item-body">
+            <div style="font-size: 25px; color:black; margin-bottom: 15px; margin-top:10px;">
+              {{product.name}}
+            </div>
+            {{product.description | cut:true:120:' ...'}}
+          </div>
+
+
+          <div class="row" style="text-align: center; color:black !important; margin-top: 10px">
+
+            <div ng-class="{'col col-30':product.hasLoyaltyDiscount , 'col col-50':!product.hasLoyaltyDiscount }"
+                 style="border-right: 1px solid black">
+              <div style="font-size: 12px">
+                Regular price
+              </div>
+              <div>
+                <b>{{product.regularPrice | currency : product.currency}}</b>
+              </div>
+            </div>
+
+            <div ng-class="{'col col-30 price-border':product.hasLoyaltyDiscount , 'col col-50':!product.hasLoyaltyDiscount }">
+              <div style="position: relative;">
+                <div style="position: absolute; right: -5px; top: -25px;  opacity: 0.6">
+                  <div class="discount-circle">
+                    -{{product.discount}}%
+                  </div>
+                </div>
+                <div class="margin-top: 120px">
+                  <div style="font-size: 12px">
+                    Discount
+                  </div>
+                  <div>
+                    <b>{{product.priceWithDiscount | currency : product.currency}}</b>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div ng-class="{'col col-30':product.hasLoyaltyDiscount , 'col col-50':!product.hasLoyaltyDiscount }">
+              <div style="position: relative;">
+                <div style="position: absolute; right: -5px; top: -25px; opacity: 0.6;">
+                  <div class="discount-circle">
+                    -{{product.loyaltyDiscount}}%
+                  </div>
+                </div>
+                <div>
+                  <div style="font-size: 12px">
+                    Loyalty discount
+                  </div>
+                  <div>
+                    <b>{{product.priceWithloyaltyDiscount | currency : product.currency}}</b>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div style="font-size: 20px; width: 100%; background-color: green; padding-top: 15px; padding-bottom: 15px; text-align: center">
+            DISCOUNT ID: {{product.discountId}}
+          </div>
+        </div>
       </div>
     </div>
   </ion-content>

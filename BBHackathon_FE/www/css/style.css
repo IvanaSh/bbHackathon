@@ -318,3 +318,21 @@ margin-top:10px;
   font-size: 35px;
   font-weight: bold;
 }
+
+
+
+.discount-circle {
+  border-radius: 50%;
+  background-color: yellow;
+  padding:5px;
+  height: 45px;
+  width: 45px;
+  padding-top:12px;
+  font-weight: bold;
+  margin-right: 5px;
+  transform: rotate(25deg)
+}
+
+.price-border {
+  border-right: 1px solid black;
+}
