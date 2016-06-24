@@ -14,44 +14,45 @@ app.run(['$ionicPlatform','$state','pushNotificationService',function ($ionicPla
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
 
-    var androidConfig = {
-      'senderID': '91101716832',
-      'sound': true,
-      'vibrate': true
-    };
-    Push = PushNotification.init({
-      "android": androidConfig
-    });
+    if(ionic.Platform.platform()!=='win32'){
+      var androidConfig = {
+        'senderID': '91101716832',
+        'sound': true,
+        'vibrate': true
+      };
+      Push = PushNotification.init({
+        "android": androidConfig
+      });
 
-    Push.on('registration', function(data) {
-      // device token:
-      var deviceToken = data.registrationId;
-      console.log('pushToken', deviceToken);
-      globalPushNotificationService.sentdoken(deviceToken);
-    });
-
-
-
-    Push.on('error', function(e) {
-      console.error('Notifications error: ', e.message, e);
-    });
+      Push.on('registration', function(data) {
+        // device token:
+        var deviceToken = data.registrationId;
+        console.log('pushToken', deviceToken);
+        globalPushNotificationService.sentdoken(deviceToken);
+      });
 
 
-    Push.on('notification', function(response){
-      console.log('norification', response)
-      console.log('any additinal data the push recieved', response.additionalData);
 
-      switch (response.case) {
-        case '1':
-          globalState.go('');
-          break;
-        case '2':
-          globalState.go('');
-          break;
-        default:
-      }
-    });
+      Push.on('error', function(e) {
+        console.error('Notifications error: ', e.message, e);
+      });
 
+
+      Push.on('notification', function(response){
+        console.log('norification', response)
+        console.log('any additinal data the push recieved', response.additionalData);
+
+        switch (response.case) {
+          case '1':
+            globalState.go('');
+            break;
+          case '2':
+            globalState.go('');
+            break;
+          default:
+        }
+      });
+    }
 
     if (window.cordova && window.cordova.plugins.Keyboard) {
       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
@@ -59,7 +60,7 @@ app.run(['$ionicPlatform','$state','pushNotificationService',function ($ionicPla
     if (window.StatusBar) {
       StatusBar.styleDefault();
     }
-  }).bind(this);
+  });
 }])
 
 app.config(function ($stateProvider, $urlRouterProvider) {
