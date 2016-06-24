@@ -1,5 +1,12 @@
 # bbHackathon
 
+# Instalation
+> ionic platform add android
+> ionic serve 				(for browser)
+> ionic run android			(for android device)
+
+
+
 Банка = Комерцијална
 Клиент на Банка = H&M
 
