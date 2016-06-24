@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "placeId": 1,
+    "name": "Pastrmajlija",
+    "description": "Pastrmalija is a Macedonian bread pie made from dough and meat. Pastrmalija is usually oval-shaped with sliced meat cubes on top of it. Its name derives from the word pastrma, meaning salted and dried meat of sheep or lamb",
+    "imageSrc": "img/products/pastrmajlija.jpg",
+    "regularPrice": 200,
+    "currency": "MKD",
+    "discount": 20
+  },
+  {
+    "id": 1,
+    "placeId": 1,
+    "name": "Pastrmajlija",
+    "description": "Pastrmalija is a Macedonian bread pie made from dough and meat. Pastrmalija is usually oval-shaped with sliced meat cubes on top of it. Its name derives from the word pastrma, meaning salted and dried meat of sheep or lamb",
+    "imageSrc": "img/products/pastrmajlija.jpg",
+    "regularPrice": 200,
+    "currency": "MKD",
+    "discount": 20
+  }
+]

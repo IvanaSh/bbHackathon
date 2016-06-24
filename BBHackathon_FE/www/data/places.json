@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "title": "Restaurant Ragusa",
+    "position": {
+      "lat": 41.992815,
+      "lng": 21.435614
+    },
+    "address": "Boulevard Phillip the Second of Macedon, Skopje 1000, Macedonia (FYROM)",
+    "website": "http://www.ragusa.com.mk",
+    "phone": "+389 2 321 2919",
+    "workTime": "8AM - 12AM",
+    "logoSrc": "img/mapImgs/logo/logo_ragusa.png",
+    "category": 1
+  },
+  {
+    "id": 2,
+    "title": "Magnus",
+    "position": {
+      "lat": 41.987921,
+      "lng": 21.434256
+    },
+    "address": "Boulevard Macedonia, Skopje, Macedonia (FYROM)",
+    "website": "http://www.magnus.com.mk",
+    "phone": "+389 72 222 222",
+    "logoSrc": "img/mapImgs/logo/logo_magnus.png",
+    "category": 3
+  },
+  {
+    "id": 3,
+    "title": "Irish Pub St.Patrick",
+    "position": {
+      "lat": 41.995065,
+      "lng": 21.435768
+    },
+    "address": "KEJ 13 Noemvri, Gradski Trgovski Centar Skopje, Skopje 1000, Macedonia (FYROM)",
+    "website": "http://www.irishpub.com.mk",
+    "phone": "+389 2 325 6337",
+    "logoSrc": "img/mapImgs/logo/logo_irish_pub_st_patrick.png",
+    "category": 2
+  },
+  {
+    "id": 4,
+    "title": "Pelister",
+    "position": {
+      "lat": 41.995331,
+      "lng": 21.431548
+    },
+    "address": "Macedonia Square, Skopje 1000, Macedonia (FYROM)",
+    "website": "http://www.pelisterhotel.com.mk",
+    "phone": "+389 2 311 2482",
+    "logoSrc": "img/mapImgs/logo/logo_pelister.png",
+    "workTime": "7AM - 12AM",
+    "category": 1
+  },
+  {
+    "id": 5,
+    "title": "Casa Cubana",
+    "position": {
+      "lat": 41.995297,
+      "lng": 21.434874
+    },
+    "address": "Kej 13-ti Noemvri b.b., Skopje 1000, Macedonia (FYROM)",
+    "phone": "+389 72 311 792",
+    "logoSrc": "img/mapImgs/logo/logo_casa_cubana.png",
+    "workTime": "8AM - 12AM",
+    "category": 1
+  },
+  {
+    "id": 6,
+    "title": "Anhoch",
+    "position": {
+      "lat": 41.994659,
+      "lng": 21.434161
+    },
+    "address": "Gradski Trgovski Centar Skopje, Skopje 1000, Macedonia (FYROM)",
+    "website": "http://www.anhoch.com",
+    "phone": "+389 2 329 6655",
+    "logoSrc": "img/mapImgs/logo/logo_anhoch.png",
+    "workTime": "9AM - 8:30PM",
+    "category": 4
+  },
+  {
+    "id": 7,
+    "title": "Vero",
+    "position": {
+      "lat": 41.994507,
+      "lng": 21.434869
+    },
+    "address": "Gradski Trgovski Centar Skopje, Skopje 1000, Macedonia (FYROM)",
+    "website": "http://www.vero.com.mk",
+    "phone": "+389 2 323 2640",
+    "logoSrc": "img/mapImgs/logo/logo_vero.png",
+    "workTime": "8AM - 10PM",
+    "category": 5
+  },
+  {
+    "id": 8,
+    "title": "Tinex",
+    "position": {
+      "lat": 41.992552,
+      "lng": 21.429118
+    },
+    "address": "Gradski Zid, Macedonia (FYROM)",
+    "website": "http://www.tinex.com.mk",
+    "phone": "+389 2 323 8609",
+    "logoSrc": "img/mapImgs/logo/logo_tinex.png",
+    "category": 5
+  }
+]

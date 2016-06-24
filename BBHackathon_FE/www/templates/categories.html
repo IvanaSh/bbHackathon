@@ -1,0 +1,33 @@
+<ion-view view-title="Categories" align-title="left">
+
+  <ion-nav-bar class="bar-assertive">
+    <ion-nav-back-button class="no-text">
+    </ion-nav-back-button>
+    <ion-nav-buttons side="left">
+      <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+      <button class="button button-icon button-clear"
+              href="#/app/map" ng-if="count > 0">
+        <div>DONE</div>
+      </button>
+    </ion-nav-buttons>
+  </ion-nav-bar>
+
+  <ion-content>
+    <div class="row" style="flex-wrap: wrap">
+      <div class="col col-50" ng-repeat="category in categories">
+
+        <div class="category-container" ng-style="{'background-color': colors[category.id-1]}"  ng-click="select(category)">
+          <div class="checked-category-overlayout" ng-if="category.selected">
+            <i class="ion-checkmark"></i>
+          </div>
+          <div class="category-content ">
+            <img ng-src="img/mapImgs/categories/category_{{category.id}}.png"/>
+            <p>{{category.name}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

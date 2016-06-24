@@ -1,0 +1,44 @@
+<div class="list card">
+  <div class="close-btn-div">
+    <button class="button ion-android-close close-btn custom-shadow" ng-click="place.close()"></button>
+  </div>
+  <img ng-src="img/mapImgs/banner/banner_{{place.category}}.png" class="full-image"
+       style="position: absolute; top: 0;left: 0;width: 100%; z-index: 1 " ng-style="bannerBorderLineColor">
+
+  <img class="logo-img" ng-src="{{place.logoSrc}}"
+       style="position: relative; margin-top: 50px; margin-left: 10px; z-index: 1">
+
+
+  <div style="padding-left: 15px; padding-bottom: 15px;">
+    <h4>{{place.title}}</h4>
+
+    <div style="font-size: 12px">
+      <div class="row" ng-if="place.address">
+        <i class="ion-android-pin col col-10" style="font-size: 15px"></i>
+            <span class="col col-90">
+              {{place.address}}
+            </span>
+      </div>
+      <div class="row" ng-if="place.workTime">
+        <i class="ion-ios-clock  col col-10" style="font-size: 15px"></i>
+            <span class="col col-90">
+              {{place.workTime}}
+            </span>
+      </div>
+      <div class="row" ng-if="place.phone">
+        <i class="ion-ios-telephone col col-10" style="font-size: 15px"></i>
+            <span class="col col-90">
+              {{place.phone}}
+            </span>
+      </div>
+
+    </div>
+
+  </div>
+
+  <button class="button button-clear button-assertive"
+          ng-style="buttonBackgroundColor"
+          style="font-size: 15px; color:white; width: 100%; padding: 0px"
+          ng-click="seeOffers(place.id)">SEE OFFERS</button>
+
+</div>

@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Restaurant",
+    "id": 1,
+    "selected": false
+  },
+  {
+    "name": "Bar",
+    "id": 2,
+    "selected": false
+  },
+  {
+    "name": "Gym & Fittness",
+    "id": 3,
+    "selected": false
+  },
+  {
+    "name": "IT store",
+    "id": 4,
+    "selected": false
+  },
+  {
+    "name": "Grocery store",
+    "id": 5,
+    "selected": false
+  },
+  {
+    "name": "Clothing Store",
+    "id": 6,
+    "selected": false
+  },
+  {
+    "name": "Shoes Store",
+    "id": 7,
+    "selected": false
+  }
+]
