@@ -28,7 +28,7 @@ app.run(['$ionicPlatform', '$state', 'pushNotificationService', function ($ionic
         // device token:
         var deviceToken = data.registrationId;
         console.log('pushToken', deviceToken);
-        globalPushNotificationService.sentdoken(deviceToken);
+        globalPushNotificationService.sendToken(deviceToken);
       });
 
       Push.on('error', function (e) {
