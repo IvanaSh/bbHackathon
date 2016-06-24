@@ -1,9 +1,9 @@
 # bbHackathon
 
 # Instalation
-> ionic platform add android
-> ionic serve 				(for browser)
-> ionic run android			(for android device)
+	ionic platform add android
+	ionic serve 				(for browser)
+	ionic run android			(for android device)
 
 
 
