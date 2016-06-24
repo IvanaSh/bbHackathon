@@ -3,6 +3,8 @@ app.controller('MapCtrl', function ($scope, $rootScope, placesService, DEFAULT_G
   $scope.show = false;
   $scope.mapOpacity = 1.0;
   $scope.markers = [];
+  $scope.places = [];
+  $scope.categories = [];
 
   var mapOptions = {
     center: new google.maps.LatLng(DEFAULT_GPS_POSITION),
@@ -12,10 +14,50 @@ app.controller('MapCtrl', function ($scope, $rootScope, placesService, DEFAULT_G
     styles: [{"featureType":"administrative","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"visibility":"simplified"},{"color":"#fcfcfc"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"visibility":"simplified"},{"color":"#fcfcfc"}]},{"featureType":"road.highway","elementType":"geometry","stylers":[{"visibility":"simplified"},{"color":"#dddddd"}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"visibility":"simplified"},{"color":"#dddddd"}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"visibility":"simplified"},{"color":"#eeeeee"}]},{"featureType":"water","elementType":"geometry","stylers":[{"visibility":"simplified"},{"color":"#dddddd"}]}]
   };
 
-  $scope.map = new google.maps.Map(document.getElementById("map"), mapOptions);
+  function init() {
+    $scope.categories = [];
+    clearPlaces();
+    $scope.map = new google.maps.Map(document.getElementById("map"), mapOptions);
 
-  placesService.getPlaces().then(function (response) {
-    response.data.forEach(function (marker) {
+    placesService.getPlaces().then(function (response) {
+      $scope.places = response.data;
+      $scope.places = getSubListOfPlaces($scope.places, $scope.categories);
+      renderMap($scope.places);
+    });
+  };
+
+  function getSubListOfPlaces(places, categories) {
+    var list = [];
+
+    if(categories == 0) return places;
+    for (var i = 0; i < categories.length; i++) {
+      places.map(function (place) {
+         if(categories[i] === place.category) {
+             list.push(place);
+         }
+      });
+    }
+    return list;
+  }
+
+  function clearPlaces() {
+      $scope.markers.forEach(function(m) {
+            m.setMap(null);
+      });
+  };
+
+  $rootScope.$on('doneClicked', function(categories) {
+     clearPlaces();
+     placesService.getPlaces().then(function (response) {
+      $scope.places = response.data;
+          $scope.categories = categories.targetScope.filters;
+          $scope.places = getSubListOfPlaces($scope.places, $scope.categories);
+          renderMap($scope.places);
+     });
+   });
+
+  function renderMap(markers) {
+    markers.forEach(function (marker) {
       var categoryIcon = {
         url: MarkerImageSrc(marker.category),
         scaledSize: new google.maps.Size(50, 50),
@@ -37,7 +79,7 @@ app.controller('MapCtrl', function ($scope, $rootScope, placesService, DEFAULT_G
 
       $scope.markers.push(m);
     });
-  });
+  }
 
   function onMarkerClickEvent(marker) {
     $scope.map.setCenter(this.getPosition());
@@ -53,4 +95,6 @@ app.controller('MapCtrl', function ($scope, $rootScope, placesService, DEFAULT_G
       this.setAnimation(null);
     }.bind(this)
   }
+
+    init();
 });
