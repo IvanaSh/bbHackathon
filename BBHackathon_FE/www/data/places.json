@@ -1,109 +1,109 @@
 [
   {
     "id": 1,
-    "title": "Restaurant Ragusa",
+    "title": "Sushi Taksteeg",
     "position": {
-      "lat": 41.992815,
-      "lng": 21.435614
+      "lat": 52.36921615586098,
+      "lng": 4.892004787248172
     },
-    "address": "Boulevard Phillip the Second of Macedon, Skopje 1000, Macedonia (FYROM)",
-    "website": "http://www.ragusa.com.mk",
-    "phone": "+389 2 321 2919",
-    "workTime": "8AM - 12AM",
+    "address": "Taksteeg 3",
+    "website": "http://www.Taksteeg.com.mk",
+    "phone": "+31 20 422 8978",
+    "workTime": "8AM - 03AM",
     "logoSrc": "img/mapImgs/logo/logo_ragusa.png",
     "category": 1
   },
   {
     "id": 2,
-    "title": "Magnus",
+    "title": "Clarks Shoes",
     "position": {
-      "lat": 41.987921,
-      "lng": 21.434256
+      "lat": 52.370719099999995,
+      "lng": 4.891561
     },
-    "address": "Boulevard Macedonia, Skopje, Macedonia (FYROM)",
-    "website": "http://www.magnus.com.mk",
-    "phone": "+389 72 222 222",
-    "logoSrc": "img/mapImgs/logo/logo_magnus.png",
-    "category": 3
+    "address": "Kalverstraat 80- 82",
+    "website": "http://www.clarks.nl/",
+    "phone": "+31 20 320 7019",
+    "logoSrc": "img/mapImgs/logo/logo_clarks.png",
+    "category": 7
   },
   {
     "id": 3,
-    "title": "Irish Pub St.Patrick",
+    "title": "Molly Malone's Irish Pub",
     "position": {
-      "lat": 41.995065,
-      "lng": 21.435768
+      "lat": 52.37606420766234,
+      "lng": 4.901264905929565
     },
-    "address": "KEJ 13 Noemvri, Gradski Trgovski Centar Skopje, Skopje 1000, Macedonia (FYROM)",
-    "website": "http://www.irishpub.com.mk",
-    "phone": "+389 2 325 6337",
+    "address": "Oudezijds Kolk 9",
+    "website": "http://www.mollymalone.com",
+    "phone": "+31 20 624 1150",
     "logoSrc": "img/mapImgs/logo/logo_irish_pub_st_patrick.png",
     "category": 2
   },
   {
     "id": 4,
-    "title": "Pelister",
+    "title": "Wok to Walk",
     "position": {
-      "lat": 41.995331,
-      "lng": 21.431548
+      "lat": 52.3719651,
+      "lng": 4.8938496
     },
-    "address": "Macedonia Square, Skopje 1000, Macedonia (FYROM)",
-    "website": "http://www.pelisterhotel.com.mk",
-    "phone": "+389 2 311 2482",
+    "address": "Damstraat 44, 1012 JM Amsterdam",
+    "website": "http://www.woktowalk.com.nl",
+    "phone": "/",
     "logoSrc": "img/mapImgs/logo/logo_pelister.png",
-    "workTime": "7AM - 12AM",
+    "workTime": "7AM - 06AM",
     "category": 1
   },
   {
     "id": 5,
-    "title": "Casa Cubana",
+    "title": "Café-restaurant van Kerkwijk",
     "position": {
-      "lat": 41.995297,
-      "lng": 21.434874
+      "lat": 52.3723187,
+      "lng": 4.8837833
     },
-    "address": "Kej 13-ti Noemvri b.b., Skopje 1000, Macedonia (FYROM)",
-    "phone": "+389 72 311 792",
+    "address": "Nes 41, 1012 KC Amsterdam",
+    "phone": "020 620 3316",
     "logoSrc": "img/mapImgs/logo/logo_casa_cubana.png",
-    "workTime": "8AM - 12AM",
+    "workTime": "11AM – 10PM",
     "category": 1
   },
   {
     "id": 6,
-    "title": "Anhoch",
+    "title": "Media Markt Amsterdam Centrum",
     "position": {
-      "lat": 41.994659,
-      "lng": 21.434161
+      "lat": 52.3769082,
+      "lng": 4.903181
     },
-    "address": "Gradski Trgovski Centar Skopje, Skopje 1000, Macedonia (FYROM)",
-    "website": "http://www.anhoch.com",
-    "phone": "+389 2 329 6655",
+    "address": "Oosterdokskade 67, 1011 DL Amsterdam",
+    "website": "mediamarkt.nl",
+    "phone": "020 521 3600",
     "logoSrc": "img/mapImgs/logo/logo_anhoch.png",
     "workTime": "9AM - 8:30PM",
     "category": 4
   },
   {
     "id": 7,
-    "title": "Vero",
+    "title": "AH Prins Hendrikkade",
     "position": {
-      "lat": 41.994507,
-      "lng": 21.434869
+      "lat": 52.3758699,
+      "lng": 4.8917091
     },
-    "address": "Gradski Trgovski Centar Skopje, Skopje 1000, Macedonia (FYROM)",
-    "website": "http://www.vero.com.mk",
-    "phone": "+389 2 323 2640",
-    "logoSrc": "img/mapImgs/logo/logo_vero.png",
+    "address": "Prins Hendrikkade 20, 1012 TL Amsterdam",
+    "website": "ah.nl",
+    "phone": "020 623 2461",
+    "logoSrc": "img/mapImgs/logo/logo_tinex.png",
     "workTime": "8AM - 10PM",
     "category": 5
   },
   {
     "id": 8,
-    "title": "Tinex",
+    "title": "Albert Heijn",
     "position": {
-      "lat": 41.992552,
-      "lng": 21.429118
+      "lat": 52.3746123,
+      "lng": 4.8991549
     },
-    "address": "Gradski Zid, Macedonia (FYROM)",
-    "website": "http://www.tinex.com.mk",
-    "phone": "+389 2 323 8609",
+    "address": "Nieuwmarkt 18, 1012 CR Amsterdam",
+    "website": "ah.nl",
+    "phone": "020 623 2461",
     "logoSrc": "img/mapImgs/logo/logo_tinex.png",
     "category": 5
   }

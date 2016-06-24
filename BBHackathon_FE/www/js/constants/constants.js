@@ -9,8 +9,8 @@ app
     "#612d2d"
   ])
   .constant('DEFAULT_GPS_POSITION', {
-    lat: 41.995968,
-    lng: 21.431418
+    lat: 52.377838,
+    lng: 4.890014
   })
   .constant('MarkerImageSrc', function(id) {
     return 'img/mapImgs/markers/marker_' + id + '.png';
