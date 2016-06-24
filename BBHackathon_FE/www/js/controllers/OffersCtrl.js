@@ -6,8 +6,6 @@ app.controller('OffersCtrl', function($scope, offersService, loyaltyDiscountServ
 
     var products = response.data;
     placesService.getPlaceById(1).then(function(data) {
-
-
       $scope.place = data;
       $scope.place.color = COLOR_ARRAY[$scope.place.category - 1];
       var mapOptions = {
@@ -18,15 +16,15 @@ app.controller('OffersCtrl', function($scope, offersService, loyaltyDiscountServ
         styles: [{"featureType":"administrative","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"visibility":"simplified"},{"color":"#fcfcfc"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"visibility":"simplified"},{"color":"#fcfcfc"}]},{"featureType":"road.highway","elementType":"geometry","stylers":[{"visibility":"simplified"},{"color":"#dddddd"}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"visibility":"simplified"},{"color":"#dddddd"}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"visibility":"simplified"},{"color":"#eeeeee"}]},{"featureType":"water","elementType":"geometry","stylers":[{"visibility":"simplified"},{"color":"#dddddd"}]}]
       };
 
-     var map = new google.maps.Map(document.getElementById("map"), mapOptions);
-      map.panBy(0, -30);
+     var map = new google.maps.Map(document.getElementById("map1"), mapOptions);
+      map.panBy(-50, -15);
 
       var marker = new google.maps.Marker({
         position: new google.maps.LatLng($scope.place.position),
         map: map,
         icon: {
           url: MarkerImageSrc($scope.place.category),
-          scaledSize: new google.maps.Size(50, 50),
+          scaledSize: new google.maps.Size(40, 40),
           origin: new google.maps.Point(0, 0),
         },
         optimized: false
@@ -37,18 +35,8 @@ app.controller('OffersCtrl', function($scope, offersService, loyaltyDiscountServ
         product.hasLoyaltyDiscount = loyaltyDiscountService.hasLoyaltyDiscount();
         product.loyaltyDiscount = loyaltyDiscountService.getLoyalDiscount();
         product.priceWithloyaltyDiscount = Math.ceil(product.priceWithDiscount * (1 - product.loyaltyDiscount / 100));
-
         $scope.products.push(product);
-      })
+      });
     });
-
-
-
-
   })
-
-
-
-
-
 });

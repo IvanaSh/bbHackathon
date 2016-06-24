@@ -1,18 +1,17 @@
 <ion-view view-title="Offers" align-title="left">
-
   <ion-content>
 
-    <div style="position: absolute; width: 100%; z-index: 2">
-      <div id="map" style="height: 120px; opacity: 0.7" ng-style="{'border-bottom': '10px solid ' + place.color}"></div>
-      <img class="logo-img" ng-src="{{place.logoSrc}}" style="position: relative; margin-top: 70px;">
+    <div class="offers-header">
+      <div id="map1"></div>
+      <img class="logo-img" ng-src="{{place.logoSrc}}" style="position: relative; margin-top: -50px;">
 
-      <div style="position: absolute; margin-left: 200px;">
+      <div style="position: relative; margin-top: -60px; padding:5px; padding-left: 110px;font-size: 20px; font-weight: bold; color:white; width: 100%" ng-style="{'background-color': place.color}">
         {{place.title}}
       </div>
     </div>
 
 
-    <div class="list" style="position: absolute; margin-top:170px; z-index: 1">
+    <div class="list" style="position: absolute; margin-top:170px;">
       <div ng-repeat="product in products">
         <div class="list card stable-border">
           <img ng-src="{{product.imageSrc}}" width="100%">
