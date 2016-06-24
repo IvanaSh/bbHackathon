@@ -1,7 +1,8 @@
 app.factory('offersService', function($http, OffersJSONPath) {
   return {
-    getPlaces: function(placeId) {
+    getOffers: function(placeId) {
       return $http.get(OffersJSONPath(placeId));
-    }
+    },
+
   }
 });

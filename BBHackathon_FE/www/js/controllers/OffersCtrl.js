@@ -2,7 +2,7 @@ app.controller('OffersCtrl', function($scope, offersService, loyaltyDiscountServ
 
   $scope.products = [];
 
-  offersService.getPlaces(1).then(function(response) {
+  offersService.getOffers(1).then(function(response) {
     var products = response.data;
 
     products.forEach(function(product) {
