@@ -14,7 +14,7 @@ app.controller('MapCtrl', function ($scope, $rootScope, placesService, DEFAULT_G
 
   $scope.map = new google.maps.Map(document.getElementById("map"), mapOptions);
 
-  placesService.getPlaces().then(function (response) {
+  placesService.getAll().then(function (response) {
     response.data.forEach(function (marker) {
       var categoryIcon = {
         url: MarkerImageSrc(marker.category),
