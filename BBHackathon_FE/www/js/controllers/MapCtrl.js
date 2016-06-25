@@ -19,7 +19,7 @@ app.controller('MapCtrl', function ($scope, $rootScope, placesService, DEFAULT_G
     clearPlaces();
     $scope.map = new google.maps.Map(document.getElementById("map"), mapOptions);
 
-    placesService.getPlaces().then(function (response) {
+    placesService.getAll().then(function (response) {
       $scope.places = response.data;
       $scope.places = getSubListOfPlaces($scope.places, $scope.categories);
       renderMap($scope.places);
@@ -48,7 +48,7 @@ app.controller('MapCtrl', function ($scope, $rootScope, placesService, DEFAULT_G
 
   $rootScope.$on('doneClicked', function(categories) {
      clearPlaces();
-     placesService.getPlaces().then(function (response) {
+     placesService.getAll().then(function (response) {
       $scope.places = response.data;
           $scope.categories = categories.targetScope.filters;
           $scope.places = getSubListOfPlaces($scope.places, $scope.categories);

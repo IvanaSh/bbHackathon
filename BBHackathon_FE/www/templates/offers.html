@@ -1,7 +1,18 @@
-<ion-view view-title="Offers" align-title="left">
 
+<ion-view view-title="Offers" align-title="left" ng-cloak>
   <ion-content>
-    <div class="list">
+
+    <div class="offers-header">
+      <div id="map1"></div>
+      <img class="logo-img" ng-src="{{place.logoSrc}}" style="position: relative; margin-top: -50px;">
+
+      <div style="position: relative; margin-top: -60px; padding:5px; padding-left: 110px;font-size: 20px; font-weight: bold; color:white; width: 100%" ng-style="{'background-color': place.color}">
+        {{place.title}}
+      </div>
+    </div>
+
+
+    <div class="list" style="position: absolute; margin-top:170px;">
       <div ng-repeat="product in products">
         <div class="list card stable-border">
           <img ng-src="{{product.imageSrc}}" width="100%">
@@ -62,7 +73,7 @@
               </div>
             </div>
           </div>
-          <div style="font-size: 20px; width: 100%; background-color: green; padding-top: 15px; padding-bottom: 15px; text-align: center">
+          <div style="font-size: 20px; width: 100%; padding-top: 15px; padding-bottom: 15px; text-align: center" ng-style="{'background-color': place.color}">
             DISCOUNT ID: {{product.discountId}}
           </div>
         </div>

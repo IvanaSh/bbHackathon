@@ -303,6 +303,7 @@ margin-top:10px;
 
 
 .logo-img {
+  background-color: white;
   border-radius: 50%;
   box-shadow: 0 0 3px gray;
   width: 80px;
@@ -335,4 +336,15 @@ margin-top:10px;
 
 .price-border {
   border-right: 1px solid black;
+}
+
+.offers-header {
+  position: absolute;
+  width: 100%;
+}
+
+
+#map1 {
+  height: 120px;
+  opacity: 0.7;
 }
