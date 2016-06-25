@@ -5,7 +5,7 @@ app.factory('placesService', function($http, PLACES_JSON_PATH) {
     },
     getPlaceById: function(placeId) {
       return this.getAll().then(function(response) {
-        return response.data[0];
+        return response;
       });
     }
   }

@@ -1,7 +1,11 @@
-app.factory('offersService', function($http, API_ENDPOINT) {
+app.factory('offersService', function($http, OFFERS_JSON_PATH_2,OFFERS_JSON_PATH_3) {
   return {
     getOffers: function(placeId) {
-      return $http.get(API_ENDPOINT + '/offers/place?placeID=' + placeId);
+      if(placeId ==="2"){
+        return $http.get(OFFERS_JSON_PATH_2);
+      }else if(placeId === "3"){
+        return $http.get(OFFERS_JSON_PATH_3);
+      }
     }
   }
 });

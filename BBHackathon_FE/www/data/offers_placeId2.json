@@ -1,0 +1,24 @@
+[
+  {
+    "id": 1,
+    "placeId": 2,
+    "name": "Hamble Oak",
+    "description": "Een mannelijke styling met een vrouwelijke twist. Deze prachtige brogues voor dames zijn uitgevoerd in licht- en donkerroze leer en de modieuze klassieke geponste detaillering wordt gecombineerd met een eenvoudige vetersluiting.",
+    "imageSrc": "img/products/clarks.jpg",
+    "regularPrice": 100,
+    "currency": "EUR",
+    "discount": 50,
+    "discountId": "RR234D346GJU"
+  },
+  {
+    "id": 2,
+    "placeId": 2,
+    "name": "Exton Brogue",
+    "description": "Exton Brogue, blauwe suède brogues voor heren. Dankzij Clarks Cushion Plus bieden ze ultiem comfort en maximale schokabsorptie. Je kunt ze gerust de hele dag dragen zonder last te krijgen van vermoeide voeten.",
+    "imageSrc": "img/products/clarks2.jpg",
+    "regularPrice": 120,
+    "currency": "EUR",
+    "discount": 50,
+    "discountId": "RR234D346GJU"
+  }
+]

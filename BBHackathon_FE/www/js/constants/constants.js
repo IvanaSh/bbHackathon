@@ -23,4 +23,6 @@ app
   .constant('API_ENDPOINT', 'http://api.themoviedb.org/3/')
   .constant('CATEGORIES_JSON_PATH', 'data/categories.json')
   .constant('PLACES_JSON_PATH', 'data/places.json')
+  .constant('OFFERS_JSON_PATH_2', 'data/offers_placeId2.json')
+  .constant('OFFERS_JSON_PATH_3', 'data/offers_placeId3.json')
 ;
