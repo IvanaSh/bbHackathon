@@ -6,9 +6,11 @@
 var app = angular.module('starter', ['ionic', 'ionic-material']);
 var Push;
 var globalPushNotificationService;
+var globalLocation;
 var globalState;
-app.run(['$ionicPlatform', '$state', 'pushNotificationService', function ($ionicPlatform, $state, pushNotificationService) {
+app.run(['$ionicPlatform', '$location','$state', 'pushNotificationService', function ($ionicPlatform, $location, $state, pushNotificationService) {
   globalPushNotificationService = pushNotificationService;
+  globalLocation = $location;
   globalState = $state;
   $ionicPlatform.ready(function () {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
@@ -38,15 +40,7 @@ app.run(['$ionicPlatform', '$state', 'pushNotificationService', function ($ionic
       Push.on('notification', function (response) {
         console.log('norification', response)
         console.log('any additinal data the push recieved', response.additionalData);
-        switch (response.case) {
-          case '1':
-            globalState.go('');
-            break;
-          case '2':
-            globalState.go('');
-            break;
-          default:
-        }
+        globalState.go('app.offers',{placeId:response.additionalData.id})
       });
     }
 
