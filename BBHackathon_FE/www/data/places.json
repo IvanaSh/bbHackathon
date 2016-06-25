@@ -11,7 +11,7 @@
     "phone": "+31 20 422 8978",
     "workTime": "8AM - 03AM",
     "logoSrc": "img/mapImgs/logo/logo_ragusa.png",
-    "category": 1
+    "categoryId": 1
   },
   {
     "id": 2,
@@ -24,7 +24,7 @@
     "website": "http://www.clarks.nl/",
     "phone": "+31 20 320 7019",
     "logoSrc": "img/mapImgs/logo/logo_clarks.png",
-    "category": 7
+    "categoryId": 7
   },
   {
     "id": 3,
@@ -37,7 +37,7 @@
     "website": "http://www.mollymalone.com",
     "phone": "+31 20 624 1150",
     "logoSrc": "img/mapImgs/logo/logo_irish_pub_st_patrick.png",
-    "category": 2
+    "categoryId": 2
   },
   {
     "id": 4,
@@ -50,7 +50,7 @@
     "website": "http://www.woktowalk.com.nl",
     "logoSrc": "img/mapImgs/logo/logo_pelister.png",
     "workTime": "7AM - 06AM",
-    "category": 1
+    "categoryId": 1
   },
   {
     "id": 5,
@@ -63,7 +63,7 @@
     "phone": "020 620 3316",
     "logoSrc": "img/mapImgs/logo/logo_casa_cubana.png",
     "workTime": "11AM – 10PM",
-    "category": 1
+    "categoryId": 1
   },
   {
     "id": 6,
@@ -77,7 +77,7 @@
     "phone": "020 521 3600",
     "logoSrc": "img/mapImgs/logo/logo_anhoch.png",
     "workTime": "9AM - 8:30PM",
-    "category": 4
+    "categoryId": 4
   },
   {
     "id": 7,
@@ -91,7 +91,7 @@
     "phone": "020 623 2461",
     "logoSrc": "img/mapImgs/logo/logo_tinex.png",
     "workTime": "8AM - 10PM",
-    "category": 5
+    "categoryId": 5
   },
   {
     "id": 8,
@@ -104,6 +104,6 @@
     "website": "ah.nl",
     "phone": "020 623 2461",
     "logoSrc": "img/mapImgs/logo/logo_tinex.png",
-    "category": 5
+    "categoryId": 5
   }
 ]

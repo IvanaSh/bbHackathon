@@ -22,4 +22,5 @@ app
   .constant('API_KEY', '6e44c855f8bb700398820bc37a01ff6c')
   .constant('API_ENDPOINT', 'http://api.themoviedb.org/3/')
   .constant('CATEGORIES_JSON_PATH', 'data/categories.json')
+  .constant('PLACES_JSON_PATH', 'data/places.json')
 ;

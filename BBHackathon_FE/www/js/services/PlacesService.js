@@ -1,7 +1,7 @@
-app.factory('placesService', function($http, API_ENDPOINT) {
+app.factory('placesService', function($http, PLACES_JSON_PATH) {
   return {
     getAll: function() {
-      return $http.get(API_ENDPOINT + 'places');
+      return $http.get(PLACES_JSON_PATH);
     },
     getPlaceById: function(placeId) {
       return this.getAll().then(function(response) {
