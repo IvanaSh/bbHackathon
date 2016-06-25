@@ -7,7 +7,7 @@ app.controller('OffersCtrl', function($scope, offersService, loyaltyDiscountServ
     var products = response.data;
     placesService.getPlaceById(1).then(function(data) {
       $scope.place = data;
-      $scope.place.color = COLOR_ARRAY[$scope.place.category - 1];
+      $scope.place.color = COLOR_ARRAY[$scope.place.categoryId - 1];
       var mapOptions = {
         center: new google.maps.LatLng($scope.place.position),
         zoom: 16,
@@ -23,7 +23,7 @@ app.controller('OffersCtrl', function($scope, offersService, loyaltyDiscountServ
         position: new google.maps.LatLng($scope.place.position),
         map: map,
         icon: {
-          url: MarkerImageSrc($scope.place.category),
+          url: MarkerImageSrc($scope.place.categoryId),
           scaledSize: new google.maps.Size(40, 40),
           origin: new google.maps.Point(0, 0),
         },

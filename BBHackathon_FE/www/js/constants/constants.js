@@ -12,6 +12,7 @@ app
     lat: 52.377838,
     lng: 4.890014
   })
+  .constant('API_ENDPOINT', 'https://bbhackathon.herokuapp.com/')
   .constant('MarkerImageSrc', function(id) {
     return 'img/mapImgs/markers/marker_' + id + '.png';
   })
@@ -21,5 +22,4 @@ app
   .constant('API_KEY', '6e44c855f8bb700398820bc37a01ff6c')
   .constant('API_ENDPOINT', 'http://api.themoviedb.org/3/')
   .constant('CATEGORIES_JSON_PATH', 'data/categories.json')
-  .constant('PLACES_JSON_PATH', 'data/places.json')
 ;

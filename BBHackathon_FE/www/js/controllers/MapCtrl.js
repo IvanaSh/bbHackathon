@@ -32,7 +32,7 @@ app.controller('MapCtrl', function ($scope, $rootScope, placesService, DEFAULT_G
     if(categories == 0) return places;
     for (var i = 0; i < categories.length; i++) {
       places.map(function (place) {
-         if(categories[i] === place.category) {
+         if(categories[i] === place.categoryId) {
              list.push(place);
          }
       });
@@ -59,7 +59,7 @@ app.controller('MapCtrl', function ($scope, $rootScope, placesService, DEFAULT_G
   function renderMap(markers) {
     markers.forEach(function (marker) {
       var categoryIcon = {
-        url: MarkerImageSrc(marker.category),
+        url: MarkerImageSrc(marker.categoryId),
         scaledSize: new google.maps.Size(50, 50),
         origin: new google.maps.Point(0, 0),
       }

@@ -10,7 +10,7 @@ app.directive('placeCard', function(COLOR_ARRAY, ionicMaterialInk, $location) {
     link: function(attrs, scope) {
       ionicMaterialInk.displayEffect();
 
-      var color = COLOR_ARRAY[attrs.place.category-1];
+      var color = COLOR_ARRAY[attrs.place.categoryId-1];
       attrs.buttonBackgroundColor = {'background-color' : color};
 
       attrs.bannerBorderLineColor = {'border-bottom' : '10px solid ' + color};
